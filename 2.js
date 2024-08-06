@@ -4,7 +4,11 @@ document.addEventListener("DOMContentLoaded",()=>{
         var nu=document.querySelector("#num").value;
 
         try{
-            if(nu < 0)
+            if(isNaN(nu))
+            {
+                throw new Error("its is not a number")
+            }
+            else if(nu < 0)
             {
                 throw new Error("It is a negative number")
             }
